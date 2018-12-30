@@ -1,0 +1,11 @@
+.footer {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: theme-color('primary');
+  color: $white;
+}
+
+.footer__item {
+  padding: 20px;
+}

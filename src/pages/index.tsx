@@ -8,7 +8,6 @@ const IndexPage: React.FunctionComponent = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <h1>shinyoung</h1>
-    <Link to="styleguide">Styleguide</Link>
   </Layout>
 );
 
