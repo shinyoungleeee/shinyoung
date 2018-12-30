@@ -1,32 +1,44 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
 
+import '../../styles/main.scss';
 import Header from './header';
-import '../../styles/index.scss';
+import Footer from './footer';
 
 type LayoutProps = {
   children: React.ReactNode;
 };
 
-const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+type LayoutState = {
+  mobileMenuOpen: boolean;
+};
+
+class Layout extends React.Component<LayoutProps, LayoutState> {
+  state: LayoutState = {
+    mobileMenuOpen: false,
+  };
+
+  private mobileMenuClickHandler = (): void => {
+    this.setState(state => ({ mobileMenuOpen: !state.mobileMenuOpen }));
+  };
+
+  render() {
+    return (
+      <div className="d-flex flex-column h-100">
+        <Header 
+          mobileMenuOpen={this.state.mobileMenuOpen} 
+          mobileMenuClickHandler={this.mobileMenuClickHandler}
+        />
+        <div className="flex-grow-1">
+          {
+            this.state.mobileMenuOpen
+              ? null
+              : this.props.children
           }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div>{children}</div>
-        <footer>© 2019, Built by Shinyoung Lee</footer>
-      </>
-    )}
-  />
-);
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default Layout;
