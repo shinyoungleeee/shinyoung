@@ -10,13 +10,7 @@ type SEOProps = {
   title: string;
 };
 
-const SEO = ({
-  description,
-  lang,
-  meta,
-  keywords,
-  title,
-}: SEOProps) => (
+const SEO = ({ description, lang, meta, keywords, title }: SEOProps) => (
   <StaticQuery
     query={detailsQuery}
     render={data => {

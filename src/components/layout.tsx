@@ -5,8 +5,8 @@ import Header from './header';
 import '../../styles/index.scss';
 
 type LayoutProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => (
   <StaticQuery
