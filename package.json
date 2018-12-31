@@ -36,7 +36,8 @@
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.tsx\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "check-types": "tsc --watch"
+    "check-types": "tsc --watch",
+    "heroku-postbuild": "gatsby build"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.6",
