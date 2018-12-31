@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../layout/layout';
+import SEO from '../layout/seo';
 
 const Styleguide: React.FunctionComponent = () => (
   <Layout>
     <SEO title="Styleguide" />
-    <h1>Hi from the styleguide</h1>
-    <p>Welcome to the styleguide</p>
-    <Link to="/">Go back to the homepage</Link>
+    <div className="container">
+      <h1>Styleguide</h1>
+      <p>Work in progress</p>
+    </div>
   </Layout>
 );
 
