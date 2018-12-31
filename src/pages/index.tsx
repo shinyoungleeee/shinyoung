@@ -9,8 +9,8 @@ const IndexPage: React.FunctionComponent = () => (
     <SEO title="Home" keywords={[`gatsby`, `react`]} />
     <div className="container">
       <div className="mb-5">
-        <h1>shinyoung</h1>
-        <h4>Front-End Web Developer</h4>
+        <h1>shinyoung lee</h1>
+        <h4>front-end web developer</h4>
       </div>
       <div className="row">
         <div className="col">

@@ -9,11 +9,11 @@ const Footer: React.FunctionComponent = () => (
       <span>©2019 @shinyoungleeee</span>
     </div>
     <div className="footer__item footer__item--center">
-      <Social white/>
+      <Social white />
     </div>
     <div className="footer__item footer__item--right">
-      <Link to="styleguide" className="badge badge-pill badge-light">
-        Styleguide
+      <Link to="styleguide" className="btn">
+        <span className="badge badge-pill badge-light">Styleguide</span>
       </Link>
     </div>
   </footer>

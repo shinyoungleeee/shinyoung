@@ -19,20 +19,20 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 
   return (
     <header className={headerClass}>
-      <Link to="/" className="header__item">
+      <Link to="/" className="btn">
         <div className="header__logo">SL</div>
       </Link>
-      <div className="header__item" onClick={mobileMenuClickHandler}>
+      <div className="btn" onClick={mobileMenuClickHandler}>
         <div className="header__hamburger" />
       </div>
       <div className="header__link-container">
-        <Link to="resume" className="header__item">
+        <Link to="resume" className="btn btn-link">
           Resume
         </Link>
-        <Link to="music" className="header__item">
+        <Link to="music" className="btn btn-link">
           Music
         </Link>
-        <Link to="contact" className="header__item">
+        <Link to="contact" className="btn btn-link">
           Contact
         </Link>
       </div>
