@@ -1,18 +1,20 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faFacebook,
   faLinkedin,
   faGithub,
   faInstagram,
+  faFacebook,
+  faSoundcloud,
+  faBandcamp,
 } from '@fortawesome/free-brands-svg-icons';
 import classNames from 'classnames';
 
 type SocialProps = {
-  white: boolean;
+  white?: boolean;
 };
 
-const Social = ({ white }: SocialProps) => {
+const Social: React.FunctionComponent<SocialProps> = ({ white }) => {
   const socialClass = classNames({
     social: true,
     'social--white': white,
@@ -20,24 +22,26 @@ const Social = ({ white }: SocialProps) => {
 
   return (
     <div className={socialClass}>
-      <a href="//linkedin.com/in/shinyoung-lee/" className="social__link">
+      <a href="//linkedin.com/in/shinyoung-lee/" className="social__link btn">
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
-      <a href="//github.com/shinyoungleeee" className="social__link">
+      <a href="//github.com/shinyoungleeee" className="social__link btn">
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a href="//www.instagram.com/shinyoungleeee/" className="social__link">
+      <a href="//instagram.com/shinyoungleeee/" className="social__link btn">
         <FontAwesomeIcon icon={faInstagram} />
       </a>
-      <a href="//www.facebook.com/shinyoung.lee" className="social__link">
+      <a href="//facebook.com/shinyoung.lee" className="social__link btn">
         <FontAwesomeIcon icon={faFacebook} />
+      </a>
+      <a href="//soundcloud.com/shinyoung" className="social__link btn">
+        <FontAwesomeIcon icon={faSoundcloud} />
+      </a>
+      <a href="//shinyoung.bandcamp.com" className="social__link btn">
+        <FontAwesomeIcon icon={faBandcamp} />
       </a>
     </div>
   );
-};
-
-Social.defaultProps = {
-  white: false,
 };
 
 export default Social;

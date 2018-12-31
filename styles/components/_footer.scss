@@ -8,8 +8,11 @@
 }
 
 .footer__item {
-  width: 33%;
   padding: 5px;
+
+  &--left   { width: 25%; }
+  &--center { width: 50%; }
+  &--right  { width: 25%; }
 
   &--left   { text-align: left; }
   &--center { text-align: center; }
@@ -29,5 +32,7 @@
     &--left   { order: 2; }
     &--center { order: 1; }
     &--right  { order: 3; }
+
+    &--center { padding-bottom: 0; }
   } 
 }

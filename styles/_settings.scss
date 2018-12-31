@@ -10,5 +10,7 @@ $font-family-sans-serif:
   'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 $font-family-bold: 'Bowlby One SC', cursive;
 
+$link-hover-decoration: none;
+
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
