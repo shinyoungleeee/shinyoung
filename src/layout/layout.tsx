@@ -1,8 +1,8 @@
 import React from 'react';
 
 import '../../styles/main.scss';
-import Header from './header';
-import Footer from './footer';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -24,16 +24,12 @@ class Layout extends React.Component<LayoutProps, LayoutState> {
   render() {
     return (
       <div className="d-flex flex-column h-100">
-        <Header 
-          mobileMenuOpen={this.state.mobileMenuOpen} 
+        <Header
+          mobileMenuOpen={this.state.mobileMenuOpen}
           mobileMenuClickHandler={this.mobileMenuClickHandler}
         />
         <div className="flex-grow-1">
-          {
-            this.state.mobileMenuOpen
-              ? null
-              : this.props.children
-          }
+          {this.state.mobileMenuOpen ? null : this.props.children}
         </div>
         <Footer />
       </div>

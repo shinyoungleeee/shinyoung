@@ -3,14 +3,14 @@ import React from 'react';
 import Layout from '../layout/layout';
 import SEO from '../layout/seo';
 
-const ContactPage: React.FunctionComponent = () => (
+const ResumePage: React.FunctionComponent = () => (
   <Layout>
-    <SEO title="Contact" />
+    <SEO title="Resume" />
     <div className="container">
-      <h1>Contact</h1>
+      <h1>Resume</h1>
       <p>Work in progress</p>
     </div>
   </Layout>
 );
 
-export default ContactPage;
+export default ResumePage;

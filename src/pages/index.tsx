@@ -1,13 +1,55 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../layout/layout';
+import SEO from '../layout/seo';
+import AmpersandList from '../components/ampersand-list';
 
 const IndexPage: React.FunctionComponent = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>shinyoung</h1>
+    <SEO title="Home" keywords={[`gatsby`, `react`]} />
+    <div className="container">
+      <div className="mb-5">
+        <h1>shinyoung</h1>
+        <h4>Front-End Web Developer</h4>
+      </div>
+      <div className="row">
+        <div className="col">
+          <AmpersandList
+            headline="I write"
+            items={['JavaScript (ES6)', 'TypeScript', 'SCSS', 'Ruby', 'music']}
+          />
+        </div>
+        <div className="col">
+          <AmpersandList
+            headline="I build"
+            items={[
+              'React.js',
+              'Redux',
+              'Node.js',
+              'Gatsby',
+              'Ruby on Rails',
+              'Bootstrap',
+            ]}
+          />
+        </div>
+        <div className="col">
+          <AmpersandList
+            headline="I value"
+            items={[
+              'customer experience',
+              'scalable, maintainable code',
+              'load optimization',
+            ]}
+          />
+        </div>
+        <div className="col">
+          <AmpersandList
+            headline="I love"
+            items={['UI/UX design', 'people/culture']}
+          />
+        </div>
+      </div>
+    </div>
   </Layout>
 );
 

@@ -26,18 +26,12 @@ const Header: React.FunctionComponent<HeaderProps> = ({
         <div className="header__hamburger" />
       </div>
       <div className="header__link-container">
-        <Link to="about" className="header__item">
-          About
+        <Link to="resume" className="header__item">
+          Resume
         </Link>
-        <Link to="gear" className="header__item">
-          Gear
+        <Link to="music" className="header__item">
+          Music
         </Link>
-        <a href="//linkedin.com/in/shinyoung-lee/" className="header__item">
-          LinkedIn
-        </a>
-        <a href="//github.com/shinyoungleeee" className="header__item">
-          GitHub
-        </a>
         <Link to="contact" className="header__item">
           Contact
         </Link>

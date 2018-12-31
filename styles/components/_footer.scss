@@ -2,10 +2,32 @@
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: theme-color('primary');
   color: $white;
 }
 
 .footer__item {
-  padding: 20px;
+  width: 33%;
+  padding: 5px;
+
+  &--left   { text-align: left; }
+  &--center { text-align: center; }
+  &--right  { text-align: right; }
+} 
+
+@include media-breakpoint-down(sm) {
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .footer__item {
+    &--left   { width: 70%; }
+    &--center { width: 100%; }
+    &--right  { width: 30%; }
+  
+    &--left   { order: 2; }
+    &--center { order: 1; }
+    &--right  { order: 3; }
+  } 
 }

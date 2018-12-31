@@ -1,0 +1,14 @@
+.ampersand-list {
+  list-style: none;
+}
+
+.ampersand-list__item {
+  position: relative;
+  white-space: nowrap;
+
+  &:not(:first-of-type):before {
+    content: '&';
+    position: absolute;
+    left: -1.1rem;
+  }
+}
