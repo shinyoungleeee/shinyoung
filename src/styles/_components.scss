@@ -29,7 +29,11 @@
 // @import '~bootstrap/scss/carousel';
 // @import '~bootstrap/scss/spinners';
 
+@import './layout/layout';
+@import './layout/section';
+
 @import './components/header';
 @import './components/footer';
+@import './components/hero';
 @import './components/ampersand-list';
-@import './components/social';
+@import './components/social-link';

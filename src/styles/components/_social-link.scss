@@ -1,0 +1,15 @@
+$social-link-size: 1.5rem;
+
+.social-link {
+  font-size: $social-link-size;
+  height: $social-link-size * 2;
+  width: $social-link-size * 2.3;
+
+  &--white {
+    color: $white;
+
+    @include hover {
+      color: darken($white, 15%);
+    }
+  }
+}

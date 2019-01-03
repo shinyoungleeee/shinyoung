@@ -2,6 +2,8 @@ import { Link } from 'gatsby';
 import React from 'react';
 import classnames from 'classnames';
 
+import NavLinks from './nav-links';
+
 type HeaderProps = {
   mobileMenuOpen: boolean;
   mobileMenuClickHandler: () => void;
@@ -18,25 +20,20 @@ const Header: React.FunctionComponent<HeaderProps> = ({
   });
 
   return (
-    <header className={headerClass}>
-      <Link to="/" className="btn">
-        <div className="header__logo">SL</div>
-      </Link>
-      <div className="btn" onClick={mobileMenuClickHandler}>
-        <div className="header__hamburger" />
-      </div>
-      <div className="header__link-container">
-        <Link to="resume" className="btn btn-link">
-          Resume
+    <>
+      <div className="header__spacer" />
+      <header className={headerClass}>
+        <Link to="/" className="btn">
+          <div className="header__logo">SL</div>
         </Link>
-        <Link to="music" className="btn btn-link">
-          Music
-        </Link>
-        <Link to="contact" className="btn btn-link">
-          Contact
-        </Link>
-      </div>
-    </header>
+        <div className="btn" onClick={mobileMenuClickHandler}>
+          <div className="header__hamburger" />
+        </div>
+        <div className="header__link-container">
+          <NavLinks className="header__link" />
+        </div>
+      </header>
+    </>
   );
 };
 

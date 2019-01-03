@@ -2,6 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
+import logo32 from '../images/logo-32x32.png';
+
 type SEOProps = {
   description?: string;
   lang: string;
@@ -65,6 +67,9 @@ const SEO = ({ description, lang, meta, keywords, title }: SEOProps) => (
                 : []
             )
             .concat(meta)}
+          link={[
+            { rel: 'shortcut icon', type: 'image/png', href: `${logo32}` },
+          ]}
         />
       );
     }}

@@ -1,0 +1,16 @@
+.section {
+  padding: $section-y-gutter 0;
+
+  &--flush  { padding: 0; }
+  
+  &--yellow { background-color: $yellow; }
+  &--blue   { background-color: $blue; }
+  &--red    { background-color: $red; }
+  &--purple { background-color: $purple; }
+  &--green { background-color: $green; }
+
+  &--blue,
+  &--red,
+  &--purple,
+  &--green { color: $white; }
+}

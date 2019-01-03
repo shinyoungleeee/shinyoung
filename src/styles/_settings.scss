@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+
+$blue:    #005995 !default;
+$indigo:  #6610f2 !default;
+$purple:  #600473 !default;
+$pink:    #e83e8c !default;
+$red:     #fa625f !default;
+$orange:  #fd7e14 !default;
+$yellow:  #fbf579 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$primary: $blue;
+$secondary: $purple;
+
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:200|Bowlby+One+SC');
+
+$font-family-sans-serif: 'Nunito',
+  // Basic web fallback
+  'Helvetica Neue',
+  Arial, sans-serif,
+  // Emoji fonts
+  'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$font-family-bold: 'Bowlby One SC', cursive;
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+$link-hover-decoration: none;
+
+// -----------------------------------------------------------------------------
+// Bootstrap
+// -----------------------------------------------------------------------------
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+// -----------------------------------------------------------------------------
+// Component Sizing
+// -----------------------------------------------------------------------------
+
+$header-height: 70px;
+$section-y-gutter: 50px;
+
+// -----------------------------------------------------------------------------
+// Z-indicies
+// -----------------------------------------------------------------------------
+
+$header-z: 100;
+$layout__main-content-overlay-z: 10;
