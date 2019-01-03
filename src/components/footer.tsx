@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Social from './social';
+import SocialLinks from './social-links';
 
 const Footer: React.FunctionComponent = () => (
   <footer className="footer">
@@ -9,7 +9,7 @@ const Footer: React.FunctionComponent = () => (
       <span>©2019 @shinyoungleeee</span>
     </div>
     <div className="footer__item footer__item--center">
-      <Social white />
+      <SocialLinks white />
     </div>
     <div className="footer__item footer__item--right">
       <Link to="styleguide" className="btn">

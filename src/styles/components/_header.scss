@@ -1,10 +1,18 @@
+$header-side-padding: 15px;
+
+.header__spacer {
+  height: $header-height;
+}
+
 .header {
+  position: fixed;
+  height: $header-height;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $white;
-  padding: 5px 15px;
+  padding: 5px $header-side-padding;
+  z-index: $header-z;
 }
 
 .header__logo {
@@ -12,9 +20,14 @@
   width: 2.5rem;
   text-align: center;
   font-family: $font-family-bold;
-  background: $black;
-  color: $white;
+  background: $yellow;
+  color: $black;
   vertical-align: middle;
+}
+
+.header__link {
+  text-align: left;
+  line-height: 1.1;
 }
 
 .header__hamburger {
@@ -26,7 +39,7 @@
   &:before,
   &:after {
     content: '';
-    background-color: theme-color('primary');
+    background-color: $primary;
     backface-visibility: hidden;
     height: 2px;
     left: 0;
@@ -38,17 +51,21 @@
   @include media-breakpoint-up(md) {
     display: none;
   }
+
+  .header--hamburger-menu & {
+    display: block;
+  }
 }
 
-@include media-breakpoint-down(sm) {
-  .header--closed {
+@mixin hamburger-menu($extra-class: null) {
+  .header--closed#{$extra-class} {
     .header__link-container {
       display: none;
     }
 
     .header__hamburger {
       &:before {
-        box-shadow: theme-color('primary') 0 calc(0.75rem - 1px) 0 0;
+        box-shadow: $primary 0 calc(0.75rem - 1px) 0 0;
         top: 0;
       }
 
@@ -58,18 +75,19 @@
     }
   }
 
-  .header--opened {
-    position: fixed;
+  .header--opened#{$extra-class} {
     width: 100%;
     flex-wrap: wrap;
 
     .header__link-container {
+      position: absolute;
+      top: $header-height;
+      left: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 100%;
-      text-align: center;
-      animation: fadeInDown 0.75s;
+      padding: 0 $header-side-padding;
+      animation: fadeInRight 0.5s;
     }
 
     .header__hamburger {
@@ -86,3 +104,9 @@
     }
   }
 }
+
+@include media-breakpoint-down(sm) {
+  @include hamburger-menu;
+}
+
+@include hamburger-menu('.header--hamburger-menu');

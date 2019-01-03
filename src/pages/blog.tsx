@@ -3,13 +3,13 @@ import React from 'react';
 import Layout from '../layout/layout';
 import SEO from '../layout/seo';
 
-const ResumePage: React.FunctionComponent = () => (
+const BlogPage: React.FunctionComponent = () => (
   <Layout>
-    <SEO title="Resume" />
+    <SEO title="Blog" />
     <div className="container">
       <div className="mb-5">
-        <h1>shinyoung lee</h1>
-        <h4>front-end web developer</h4>
+        <h1>blog</h1>
+        <h4>big thoughts</h4>
       </div>
       <p>work in progress</p>
       <p>
@@ -22,4 +22,4 @@ const ResumePage: React.FunctionComponent = () => (
   </Layout>
 );
 
-export default ResumePage;
+export default BlogPage;
